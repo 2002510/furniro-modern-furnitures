@@ -462,3 +462,199 @@
   }
 
 }
+
+
+/* Media Queries */
+
+/* Small screens (phones) */
+@media (max-width: $screen-sm) {
+  .productDetailPage {
+    padding: $spacing-md;
+
+    .breadcrumb {
+      margin-bottom: $spacing-md;
+      padding: $spacing-sm;
+      gap: 10px;
+      font-size: 0.9em;
+    }
+
+    .productDetailsContainer {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
+
+    .imageGallery {
+      flex: 0 0 auto;
+      width: 100%;
+      margin-bottom: $spacing-md;
+
+      .thumbnails {
+        gap: $spacing-xs;
+
+        .thumbnail {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+
+    .productInfo {
+      gap: $spacing-sm;
+
+      .productName {
+        font-size: $font-size-h4;
+      }
+
+      .price {
+        font-size: $font-size-md;
+        margin-bottom: $spacing-md;
+      }
+
+      .description {
+        margin-top: 0;
+      }
+
+      .options {
+        margin-bottom: $spacing-sm;
+
+        .sizeOptions,
+        .colorOptions {
+          gap: $spacing-xs;
+
+          button {
+            padding: $spacing-xxs $spacing-sm;
+            font-size: 0.8em;
+          }
+
+          .colorSwatch {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+
+      .quantity {
+        gap: $spacing-sm;
+        margin-bottom: $spacing-md;
+
+        label {
+          font-size: 0.9em;
+        }
+
+        .quantityControls {
+          input[type="number"] {
+            width: 40px;
+            font-size: 0.9em;
+            padding: $spacing-xxs;
+          }
+
+          button {
+            padding: $spacing-xxs $spacing-sm;
+            font-size: 0.9em;
+          }
+        }
+      }
+
+      .actions {
+        flex-direction: column;
+        gap: $spacing-sm;
+        margin-bottom: $spacing-md;
+
+        button {
+          padding: $spacing-sm $spacing-md;
+          font-size: 0.9em;
+        }
+      }
+
+      .meta {
+        font-size: 0.9em;
+      }
+    }
+
+    .productOverviewSection {
+      margin-top: 30px;
+      padding-top: 15px;
+
+      .overviewTabs {
+        button {
+          padding: 8px 15px;
+          font-size: 0.9em;
+        }
+      }
+
+      .overviewContent {
+        padding: 10px;
+
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .relatedProductsSection {
+      margin-top: 30px;
+      padding: 20px $spacing-md;
+
+      h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+
+      .relatedProductsThumbnails {
+        gap: 20px;
+
+        .relatedProductThumbnail {
+          width: 100% !important;
+          height: auto;
+        }
+      }
+    }
+
+    .relatedProductsSectionBelowOverview {
+      padding: 15px;
+
+      h2 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+      }
+
+      .relatedProductsGridBelowOverview {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+      }
+
+      .showMoreButtonBelowOverview {
+        padding: 8px 15px;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: $screen-sm) and (max-width: $screen-md) {
+  .productDetailPage {
+    padding: $spacing-lg;
+
+    .breadcrumb {
+      margin-bottom: $spacing-lg;
+      padding: $spacing-md;
+      font-size: 1em;
+    }
+
+    .productDetailsContainer {
+      flex-direction: column;
+      gap: $spacing-lg;
+    }
+
+    .imageGallery {
+      flex: 0 0 auto;
+      width: 100%;
+      margin-bottom: $spacing-lg;
+
+      .thumbnails {
+        gap: $spacing-sm;
+      }
+    }
+  }
+}

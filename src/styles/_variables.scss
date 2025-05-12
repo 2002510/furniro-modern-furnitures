@@ -34,6 +34,7 @@ $inspiration-background: #e9ecef; // Example light gray for inspiration section
 
 
 // Spacing
+$spacing-xxs: 2px;
 $spacing-xs: 0.25rem;   // 4px
 $spacing-sm: 0.5rem;    // 8px
 $spacing-md: 1rem;     // 16px
@@ -104,4 +105,9 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
-// Add any other global variables you might need
+// Breakpoints for media queries
+$screen-xs: 575.98px;
+$screen-sm: 767.98px;
+$screen-md: 991.98px;
+$screen-lg: 1199.98px;
+$screen-xl: 1399.98px;
