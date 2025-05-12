@@ -1,0 +1,401 @@
+@import '../../styles/_variables.scss';
+
+.emptyCartPage {
+  padding: $spacing-lg $spacing-xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+  text-align: center;
+
+  .emptyCartContainer {
+    max-width: 600px;
+  }
+
+  h2 {
+    font-size: $font-size-lg;
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    color: $text-secondary-color;
+    margin-bottom: $spacing-lg;
+  }
+
+  .continueShopping {
+    display: inline-block;
+    padding: $spacing-md $spacing-xl;
+    background-color: $primary-color;
+    color: $button-text-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: $font-weight-semi-bold;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($furniro-color, 10%);
+    }
+  }
+}
+
+.cartPage {
+  padding: $spacing-lg;
+
+  .shoppingContinue {
+    margin-bottom: $spacing-md;
+    a {
+      color: $text-secondary-color;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .shoppingCartHeader {
+    margin-bottom: $spacing-lg;
+    h1 {
+      font-size: $font-size-h3;
+      color: $text-primary;
+      margin-bottom: 0;
+    }
+    p {
+      color: $text-secondary-color;
+    }
+  }
+
+  .cartBillingContainer {
+    display: flex;
+    gap: $spacing-xl;
+    align-items: flex-start;
+  }
+
+  .cartItemList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: $spacing-lg;
+    border-bottom: 1px solid $border-color;
+    flex: 1; /* Take remaining width */
+
+    .cartItem {
+      display: flex;
+      justify-content: space-between;
+      padding: $spacing-md 0;
+      border-top: 1px solid $border-color;
+      min-height: 80px; /* Adjust this value as needed */
+    }
+    
+    .cartItem > * { /* Style all direct children (itemDetails, quantityControl, itemPrice, removeItemButton) */
+      display: flex;
+      align-items: center; /* Vertically align items within each child container */
+    }
+    
+    .itemDetails {
+      display: flex;
+      align-items: center;
+      gap: $spacing-xl;
+      flex-grow: 1;
+    }
+    
+    .itemImage {
+      width: 80px; /* Adjust as needed */
+      height: 90px; /* Adjust as needed */
+      object-fit: contain;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+    
+    .itemInfo {
+      flex-grow: 1; /* Allow text to take up available space */
+      min-width: 0; /* Prevent overflow of long text */
+      h3 {
+        font-size: $font-size-md; /* Adjust as needed */
+        color: $text-primary;
+        margin-bottom: $spacing-xs;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      p {
+        color: $text-secondary-color;
+        font-size: $font-size-sm; /* Adjust as needed */
+        margin-bottom: 0;
+      }
+    }
+    
+    .quantityControl {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      margin-top: 25px;
+      overflow: hidden;
+      height: 30px; /* Adjust to match your desired size */
+      margin-left: $spacing-lg; /* Add space to the left of the quantity control */
+    }
+    
+    .quantityControl button {
+      background: none;
+      border: none;
+      padding: 0 $spacing-xs;
+      cursor: pointer;
+      font-size: $font-size-md; /* Adjust as needed */
+      color: $text-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 30px; /* Make buttons square */
+    }
+    
+    .quantityControl button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .quantityControl span {
+      padding: 0 $spacing-xs;
+      font-size: $font-size-md; /* Adjust as needed */
+      min-width: 30px;
+      text-align: center;
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .itemPrice {
+      font-size: $font-size-md; /* Adjust as needed */
+      font-weight: $font-weight-semi-bold;
+      color: $text-primary;
+      min-width: 80px;
+      text-align: end;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 25px;
+      margin-right: 105px;
+      height: 30px; /* Match the height of the quantity control */
+      margin-left: 205px; /* Add space to the left of the price */
+    }
+    
+    .removeItemButton {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: $spacing-xs;
+      margin-left: $spacing-sm;
+      display: flex;
+      align-items: center;
+      margin-top: 25px;
+      height: 25px; /* Match the height of the quantity control */
+    }
+
+
+        img {
+          width: 20px;
+          height: 20px;
+          opacity: 0.7;
+          transition: opacity 0.2s ease;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    
+
+  /* Billing Details Section */
+  .billingDetails {
+    background-color: #565ABB; /* Light grey background for billing */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: $spacing-md;
+    width: 400px; /* Adjust width as needed */
+  }
+
+  .cardDetailsHeader {
+    h2 {
+      font-size: $font-size-lg;
+      color: $white-color;
+      margin-top: 0;
+      margin-bottom: $spacing-md;
+      border-bottom: 1px solid $border-color;
+      padding-bottom: $spacing-sm;
+    }
+  }
+
+  .cardTypeSection {
+    margin-bottom: $spacing-md;
+    label {
+      display: block;
+      margin-bottom: $spacing-xs;
+      color: $white-color;
+      font-size: $font-size-sm;
+    }
+    .cardLogos {
+      display: flex;
+      gap: $spacing-sm;
+      align-items: center;
+      margin-bottom: $spacing-sm;
+      img {
+        height: 55px; /* Adjust logo size */
+        width:95px;
+        background-color: #eeeeee9a;
+      }
+      a {
+        color:$white-color;
+        text-decoration: none;
+        font-size: $font-size-sm;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .paymentInfo {
+    margin-bottom: $spacing-lg;
+    label {
+      display: block;
+      margin-bottom: $spacing-xs;
+      color: $white-color;
+      font-size: $font-size-sm;
+    }
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: $spacing-sm;
+      margin-bottom: $spacing-sm;
+      outline: none;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: $font-size-sm;
+    }
+    .expiryCvv {
+      display: flex;
+      gap: $spacing-sm;
+      input {
+        width: 50%;
+      }
+    }
+  }
+
+  .orderSummarySection {
+    h3 {
+      font-size: $font-size-md;
+      color: $white-color;
+      margin-bottom: $spacing-md;
+      border-bottom: 1px solid $border-color;
+      padding-bottom: $spacing-sm;
+    }
+    .summaryItem {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $spacing-sm;
+      font-size: $font-size-sm;
+      color: $white-color;
+      span:last-child {
+        font-weight: $font-weight-semi-bold;
+        color: $white-color;
+      }
+    }
+    .summaryTotal {
+      display: flex;
+      justify-content: space-between;
+      padding-top: $spacing-md;
+      border-top: 1px solid $border-color;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      color:$accent-color;
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  .checkoutButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $accent-color;
+    color: $button-text-color;
+    padding: $spacing-md;
+    border-radius: 5px;
+    font-weight: $font-weight-semi-bold;
+    font-size: $font-size-md;
+    button {
+      background: none;
+      border: none;
+      color: $button-text-color;
+      font-weight: $font-weight-semi-bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      svg {
+        /* Style the arrow icon */
+      }
+    }
+    span {
+      font-size: $font-size-lg;
+    }
+  }
+
+
+
+ .modalButtons {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end; /* Align buttons to the right */
+ }
+
+ .cancelButton {
+  background-color: rgb(234, 40, 40);
+  color: $button-text-color; /* Use the white color variable */
+  border: none;
+  border-radius: $border-radius-sm; /* Use a border-radius variable */
+  padding: $spacing-sm $spacing-md; /* Use spacing variables */
+  font-size: $font-size-sm; /* Use a font-size variable */
+  cursor: pointer;
+  transition: background-color $transition-default;
+
+  &:hover {
+   background-color: darken(red, 10%);
+  }
+
+  &:focus {
+   outline: none;
+   box-shadow: 0 0 0 2px rgba(red, 0.5);
+  }
+ }
+
+ .confirmButton {
+  background-color: $primary-color; /* Use your Furniro brown color */
+  color: $button-text-color; /* Use the white color variable */
+  border: 1px solid $primary-color;
+  border-radius: $border-radius-sm; /* Use a border-radius variable */
+  padding: $spacing-sm $spacing-md; /* Use spacing variables */
+  font-size: $font-size-sm; /* Use a font-size variable */
+  cursor: pointer;
+  transition: background-color $transition-default, border-color $transition-default;
+
+  &:hover {
+   background-color: darken($primary-color, 10%);
+   border-color: darken($primary-color, 10%);
+  }
+
+  &:focus {
+   outline: none;
+   box-shadow: 0 0 0 2px rgba($furniro-color, 0.5);
+  }
+ }
+
+
+
+}

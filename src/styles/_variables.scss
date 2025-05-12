@@ -1,0 +1,107 @@
+// src/styles/_variables.scss
+$font-family: "play", sans-serif;
+$primary-color: #725EF1;
+$secondary-background-color: #f0f0f5;
+$white-color: #fff;
+$text-color: #333;
+$input-bg-color:#F3F1FF;
+$text-secondary-color: #777;
+$primary-button-color: #4a90e2;
+$button-text-color: #fff;
+$border-color: #ddd;
+$light-gray-color: #eee;
+$error-color: #d32f2f;
+$secondary-color: #333;
+$text-primary: #333;
+$border-color-light: #eee;
+
+$furniro-color: #B88E2F; // Example primary blue
+$accent-color: #4DE1C1; // Example success green
+$banner-background: #f8f9fa; // Example light gray
+$banner-text-color: #212529; // Example dark gray
+$secondary-color: #6c757d; // Example grey
+$text-primary: #333; // Dark grey for primary text
+$text-secondary-color: #555; // Medium grey for secondary text
+$text-secondary-color-light: #777; // Light grey for less important text
+$button-text-color: #fff; // White for button text
+$card-background: #fff; // White for card backgrounds
+$background-color: #f8f9fa; // Light grey for overall background
+$border-color: #dee2e6; // Light grey for borders
+$image-background: #f0f0f0; // Very light grey for image containers
+$error-color: #dc3545; // Red for error messages
+$warning-color: #ffc107; // Yellow for warnings
+$inspiration-background: #e9ecef; // Example light gray for inspiration section
+
+
+// Spacing
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;     // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;     // 32px
+$spacing-xxl: 3rem;    // 48px
+$spacing-xs: 4px;
+$spacing-sm: 8px;   // Example spacing variables
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px; /* Added for larger spacing */
+
+$font-size-sm: 0.8rem; // Example font size variables
+$font-size-md: 1rem;
+$font-size-lg: 1.2rem;
+$font-size-xl:1.8rem;
+$font-size-h3: 1.5rem;
+$font-size-h2: 2rem;
+$font-size-h1: 2.5rem; /* Added for section title */
+$font-size-h4: 24px;  
+
+$font-weight-regular: 400; // Example font weight variables
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$base-font-size: 16px;
+$spacing-unit: 10px;$spacing-sm: 8px;
+$spacing-xs: 4px; // Example definition for $spacing-xs
+$spacing-md: 16px;
+$font-size-sm: 0.8rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.2rem;
+$font-size-h3: 1.5rem; // Make sure this line exists
+$font-size-h2: 2rem;
+
+// Font Sizes
+$font-size-xs: 0.75rem;  // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem;    // 16px (base)
+$font-size-lg: 1.25rem;  // 20px
+$font-size-h2: 2.5rem;
+$font-size-h3: 1.75rem; // Example h3 size
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// Border Radius
+$border-radius-sm: 0.2rem; // 2px
+$border-radius-md: 0.4rem; // 4px
+$border-radius-lg: 0.6rem; // 6px
+$border-radius-pill: 50rem; // For pill-shaped elements
+
+// Box Shadow
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+$box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+// Transitions
+$transition-default: all 0.15s ease-in-out;
+
+// Breakpoints (Example - you might have more or different ones)
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Add any other global variables you might need

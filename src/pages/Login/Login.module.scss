@@ -1,0 +1,524 @@
+// src/pages/Login/Login.module.scss
+@use '../../styles/variables' as *;
+
+.loginContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: $white-color;
+
+  .formSection {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(105px);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $text-color;
+    margin-bottom: 0.5rem;
+    margin-right: -45px !important;
+    text-align: center; /* Center the main title */
+  }
+
+  p {
+    color: $text-secondary-color;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     gap: 1.5rem; /* Reduced gap between input fields */
+    width: 100%;
+
+    // label{
+    //   color: $text-secondary-color !important;
+    //   text-align: start;
+    //   margin-left: 10px;
+    //   // font-size: 0.9rem;
+    //   // gap: 45px !important;
+    // }
+  }
+
+  .inputField {
+    display: flex;
+    flex-direction: column;
+    border-radius: 55px;
+    // background-color: $input-bg-color;
+    min-width: 140% !important;
+    // align-items: start;
+  }
+
+  .inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // gap: 1rem;
+    input {
+    //   padding: 1rem 1.5rem 1rem 3rem; /* Adjust padding for icon and placeholder */
+    //   border: none;
+    //   // border-radius: 25px;
+    //   font-size: 1rem;
+      // background-color: $input-bg-color;
+    //   width: 100%;
+    //   /* Placeholder styling (can be further customized) */
+    //   // &::placeholder {
+    //   //   color:rgb(193, 174, 174) !important;
+    //   //   font-weight: bolder;
+    //   //   font-size: 15px;
+       }
+
+    //   &:focus {
+    //     outline: none;
+    //     border-color: $primary-color;
+    //   }
+
+    //   &.inputError {
+    //     border-color: $error-color;
+    //   }
+    // }
+
+    .inputIcon {
+      // position: absolute;
+      // left: 1rem;
+            // background-color: $input-bg-color;
+      color: $primary-color;
+    }
+
+    // &:hover {
+    //   border: 1px solid rgba($primary-color, 0.15);
+    //   // border-radius: 45px;
+    // }
+  }
+
+  .errorMessage {
+    display: flex; /* Align error text to the start */
+    justify-content: flex-start;
+    color: $error-color;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    // margin-left: 0.3rem; /* Align to the left */
+  }
+
+  .loginButton {
+    background-color: $primary-color; /* Same color as in the image */
+    color: $button-text-color;
+    padding: 0.7rem 0.1rem 0.8rem 0.1rem;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-right: -545px !important;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    margin-top: -0.5rem; /* Maintain some gap above the button */
+  }
+
+  .loginButton:hover{
+    background-color: darken($primary-color,5%);
+  }
+
+  .loginWithOthers {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // font-weight: bold;
+    gap: 0.8rem;
+    width: 100%;
+
+    span {
+      color: $text-secondary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-right:-85px ;
+      margin-top: 1rem;
+      // font-weight: bolder;
+    }
+
+    .socialButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 0.8rem 1.2rem 0.8rem 1.3rem;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      background-color: $white-color;
+      color: $text-color;
+      cursor: pointer;
+      font-size: 0.9rem;
+      width: 130%;
+      margin: auto;
+      transition: background-color 0.3s ease;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        background-color: $light-gray-color;
+      }
+    }
+  }
+
+  .imageSection {
+    flex: 1;
+    display: flex;
+    // height: 100vh;
+    width: 100px;
+    justify-content: flex-end;
+    align-items: center; /* Align items vertically in the center */
+    // transform: translateX(365px);
+    // background-color: rgba($primary-color, 0.15);
+    overflow: hidden; /* To contain absolute positioned elements */
+
+    .imageOverlay {
+      position: relative;
+      width: auto; /* Adjust width to contain content */
+      height: auto; /* Adjust height to contain content */
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+
+      .overlayText {
+        color: $white-color;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 8rem;
+        transform: translateX(-335px);
+        z-index: 10; /* Ensure text is above images */
+      }
+
+      .overlayImage {
+        position: absolute;
+        width: 580%;
+        // height: 100%;
+        object-fit: cover;
+        z-index: 1; /* Place behind other elements */
+      }
+
+      .overlayImage1 {
+        position: absolute;
+        width: 550px;
+        height: auto; /* Adjust height to maintain aspect ratio */
+        border-radius: 48px;
+        object-fit: contain;
+        z-index: 5;
+        transform: translateX(-260px);
+        margin-bottom: 40px;
+      }
+
+      .overlayImage2 {
+        position: absolute;
+        width: 70px;
+        border-radius: 8px;
+        object-fit: cover;
+        transform: translateX(-430px);
+        margin-top: 240px;
+        z-index: 10; /* Ensure this is on top */
+      }
+
+      .overlayImage5 {
+        position: absolute;
+        width: 350px;
+        height: auto; /* Adjust height to maintain aspect ratio */
+        border-radius: 48px;
+        object-fit: cover;
+        margin-right: 505px;
+        z-index: 2;
+        border: 1px solid $white-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+    flex-direction: column;
+
+    .formSection {
+      padding: 2rem;
+      max-width: 100%;
+    }
+
+    .imageSection {
+      display: none;
+    }
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .loginContainer {
+    flex-direction: column;
+
+    .formSection {
+      padding: 2rem;
+      max-width: 100%;
+      transform: translateX(0);
+    }
+
+    .imageSection {
+      display: none;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    .loginForm {
+      gap: 1rem;
+    }
+
+    .inputField {
+      min-width: 100% !important;
+    }
+
+    .loginButton {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+
+    .loginWithOthers span {
+      margin-right: 0;
+    }
+
+    .loginWithOthers .socialButton {
+      width: 100%;
+    }
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .loginContainer {
+    flex-direction: column;
+
+    .formSection {
+      padding: 2rem;
+      max-width: 100%;
+      transform: translateX(0);
+    }
+
+    .imageSection {
+      display: none;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .loginForm {
+      gap: 1.2rem;
+    }
+
+    .inputField {
+      min-width: 100% !important;
+    }
+
+    .loginButton {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+
+    .loginWithOthers span {
+      margin-right: 0;
+    }
+
+    .loginWithOthers .socialButton {
+      width: 100%;
+    }
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .loginContainer {
+    flex-direction: row;
+    align-items: center; /* Vertically center the form and image */
+  }
+
+  .formSection {
+    padding: 3rem;
+    max-width: 400px;
+    transform: translateX(0); /* Remove the horizontal translation */
+    margin-right: 2rem; /* Add some margin to separate form from image */
+  }
+
+  .imageSection {
+    display: none !important; /* Remove image section */
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center;  /* Vertically center image */
+    height: 100%; /* Make sure image section has full height */
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .loginForm {
+    gap: 1.5rem;
+    width: 100%; /* Make form take full width of its container */
+  }
+
+  .inputField {
+    min-width: 100%; /* Input fields should take full width */
+  }
+
+  .loginButton {
+    width: 100%; /* Button should take full width */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .loginWithOthers span {
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .loginWithOthers .socialButton {
+    width: 100%;
+  }
+
+  .imageOverlay {
+     /* Removed width and height, will adjust based on image */
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; /* Align items to the start (left in LTR) */
+      text-align: left;
+  }
+
+  .overlayText {
+      color: $white-color;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem; /* Reduced default margin-bottom */
+      transform: translateX(0); /* Remove horizontal transform */
+      margin-right: 0; /* Reset potential right margin */
+      z-index: 10;
+  }
+
+  .overlayImage {
+      position: relative; /* Changed from absolute to relative */
+      max-width: 100%;  /* Ensure image doesn't overflow its container */
+      height: auto;
+      border-radius: 10px;
+      display: block; /* Important for layout of replaced elements */
+      z-index: 1;
+  }
+
+  .overlayImage1 {
+      position: absolute;
+      width: auto; /* Changed from 550px to auto */
+      max-height: 80%; /* Limit the height */
+      border-radius: 48px;
+      object-fit: contain;
+      z-index: 5;
+      transform: translateX(100px); /* Adjust as needed */
+      margin-bottom: 0px;
+      top: 0; /* Position from the top */
+
+  }
+
+  .overlayImage2 {
+      position: absolute;
+      width: 70px;
+      border-radius: 8px;
+      object-fit: cover;
+      transform: translateX(0px); /* Adjusted */
+      margin-top: 240px;
+      z-index: 10;
+  }
+
+  .overlayImage5 {
+      position: absolute;
+      width: auto; /* Changed from 350px to auto */
+      max-height: 70%;
+      border-radius: 48px;
+      object-fit: cover;
+      margin-right: -50px; /* Adjusted */
+      z-index: 2;
+      border: 1px solid $white-color;
+      top: 10%;
+  }
+}
+     
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .loginContainer {
+    flex-direction: row;
+
+    .formSection {
+      padding: 3rem;
+      max-width: 400px;
+      transform: translateX(105px);
+    }
+
+    .imageSection {
+      display: flex;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    .loginForm {
+      gap: 1.5rem;
+    }
+
+    .inputField {
+      min-width: 140% !important;
+    }
+
+    .loginButton {
+      width: 50%;
+      margin-right: -545px !important;
+    }
+
+    .loginWithOthers span {
+      margin-right: -85px;
+    }
+
+    .loginWithOthers .socialButton {
+      width: 130%;
+    }
+  }
+}

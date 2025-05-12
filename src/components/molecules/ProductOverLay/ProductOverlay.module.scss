@@ -1,0 +1,78 @@
+@import '../../../styles/_variables.scss';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.overlayContent {
+  background-color: $white-color;
+  padding: $spacing-xl;
+  border-radius: 10px;
+  width: 400px; /* Adjust as needed */
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: $spacing-sm;
+  right: $spacing-sm;
+  background-color: transparent;
+  border: none;
+  font-size: $font-size-lg;
+  cursor: pointer;
+}
+
+.productImage {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: $spacing-md;
+}
+
+.productName {
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-sm;
+}
+
+.productPrice {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-md;
+  color: $primary-color;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-md;
+  margin-top: $spacing-md;
+  button{
+    padding: $spacing-sm $spacing-md;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+}
+
+.addToCart {
+  background-color: $primary-color;
+  color: $button-text-color;
+}
+.like{
+    background-color: #eee;
+}
+
+/* Add styles for Share and Compare buttons as needed */

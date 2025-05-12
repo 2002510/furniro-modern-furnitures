@@ -1,0 +1,60 @@
+@import '../../../styles/_variables.scss'; // If your file is named _variables.scss
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-md $spacing-xl;
+  background-color: $white-color;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: $spacing-sm;
+      height: 30px; /* Adjust as needed */
+    }
+
+    span {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+    }
+  }
+
+  .navLinks {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-left: $spacing-lg;
+
+      a {
+        text-decoration: none;
+        color: $text-primary;
+        font-weight: $font-weight-semi-bold;
+
+        &:hover {
+          color: $primary-color; // Example hover effect
+        }
+      }
+    }
+  }
+
+  .navIcons {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-left: $spacing-md;
+      display: flex; // To center the icon inside the link
+
+      img {
+        height: 24px; /* Adjust as needed */
+      }
+    }
+  }
+}
