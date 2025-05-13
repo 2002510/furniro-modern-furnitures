@@ -185,7 +185,7 @@
   display: flex;
   gap: $spacing-xl;
   margin-bottom: $spacing-xl;
-  width:100%;
+  // width:100%;
   background-color:rgba(245, 245, 220, 0.168);
   align-items: center; /* Vertically center text and slider */
 }
@@ -231,7 +231,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 25px;
-  margin-right: 75px;
+  // margin-right: 75px;
   align-items: center; /* Align slider to the left */
 }
 
@@ -268,7 +268,7 @@
   overflow: hidden;
   border-radius: 12px;
   object-fit: contain;
-  width: 450px; /* Match item width */
+  // width: 450px; /* Match item width */
   height: 338px; /* Increase image height (maintaining aspect ratio) */
 }
 
@@ -276,7 +276,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  margin-right: -245px;
+  object-fit: cover;
 }
 
 .roomCategory {
@@ -347,12 +348,12 @@
   gap: $spacing-sm;
   margin-top: $spacing-md;
   justify-content: center; /* Center the dots below the slider */
-  width: 600px; /* Match slider width for centering */
+  width: 620px; /* Match slider width for centering */
 }
 
 .navigationDot {
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: $border-color-light;
   border: 1px solid $border-color;
@@ -385,7 +386,7 @@
   }
 
   .shareSetupGrid {
-    margin-top: -75px;
+    // margin-top: -75px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
     grid-auto-rows: minmax(250px, auto); /* Minimum row height */
@@ -441,7 +442,7 @@
     }
 
     &:nth-child(8) {
-      transform: translateX(598px) !important;
+      // transform: translateX(598px) !important;
       margin-top: -115px;
       aspect-ratio: 5 / 6; /* Slightly wider */
       
@@ -597,8 +598,8 @@
 
   .inspirationItem {
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    // margin-left: 10%;
+    // margin-right: 10%;
   }
 
   .shareSetupGrid {
@@ -648,18 +649,10 @@
     text-align: center;
   }
 
-  .inspirationSliderContainer {
-    margin-right: 0;
-  }
-
-  .inspirationSlider {
-    width: 100%;
-  }
-
   .inspirationItem {
     width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
+    // margin-left: 20%;
+    // margin-right: 20%;
   }
 
   .shareSetupGrid {
@@ -670,6 +663,104 @@
     aspect-ratio: 1 / 1 !important;
   }
 }
+
+.shareSetupSection {
+  padding: $spacing-lg $spacing-xl;
+  text-align: center;
+
+  h2 {
+    font-size: $font-size-h3;
+    margin-bottom: $spacing-lg;
+    color: $text-primary;
+  }
+
+  .shareSetupDesc{
+    font-size: $font-size-sm;
+  }
+
+  .shareSetupTitle{
+    font-size: $font-size-h2;
+  }
+
+  .shareSetupGrid {
+    // margin-top: -75px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    grid-auto-rows: minmax(250px, auto); /* Minimum row height */
+    gap: $spacing-md;
+  }
+
+  .gridItem {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Apply different aspect ratios to create variation */
+    &:nth-child(1) {
+      margin-top: 25px;
+      aspect-ratio: 4 / 5; /* Taller */
+    }
+
+    &:nth-child(2) {
+      margin-top: 5px;
+      aspect-ratio: 5 / 4; /* Wider */
+    }
+
+    &:nth-child(3) {
+      margin-top: 25px;
+      aspect-ratio: 5 / 5; /* Slightly taller *///2
+    }
+
+    &:nth-child(4) {
+      margin-top: 5px;
+      aspect-ratio: 6 / 5; /* Wider */
+    }
+
+    &:nth-child(5) {
+      margin-top: 115px;
+      aspect-ratio: 4 / 4; /* Slightly wider */
+    }
+
+    &:nth-child(6) {
+      margin-top: -25px;
+      aspect-ratio: 3 / 3; /* Wider */
+    }
+
+    &:nth-child(7) {
+      margin-top: -145px;
+      aspect-ratio: 3 / 4; /* Taller */
+    }
+
+    &:nth-child(8) {
+      // transform: translateX(598px) !important;
+      margin-top: -85px;
+      aspect-ratio: 6 / 6; /* Slightly wider */
+      
+    }
+    &:nth-child(9) {
+      margin-top: -155px;
+      aspect-ratio: 5 / 6; /* Slightly wider */
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  .shareSetupGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gridItem {
+    margin-top: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+}
+
 
 /* Landscape mobile devices (Landscape phones, 480px and below) */
 @media only screen and (max-width: 480px) and (orientation: landscape) {
